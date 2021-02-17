@@ -1,0 +1,732 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap');
+:root{
+    --red-color:  #F53838;
+    --text-color: #0B132A;
+    --description-color: #4F5665;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+.body_content {
+    margin: 20px;
+}
+a{
+    text-decoration: none;
+    color: #000000;
+    font-family: 'Rubik', sans-serif;
+}
+
+.lasles_btn{
+    color: var(--red-color);
+    width: 150px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #F53855;
+    border-radius: 50px;
+    transition: background .2s linear, color .2s linear;
+}
+.lasles_btn:hover{
+    color: #fff;
+    background: #F53838;
+}
+
+.lasles_btn_text{
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s linear;
+}
+.lasles_btn_text:hover{
+    border-bottom: 2px solid var(--red-color);
+}
+
+
+/* ** HEADER ** */
+
+header{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.Logo{
+    margin-left: 30px;
+}
+nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 40px;
+    margin: 0 auto;
+}
+nav a{
+    color: var(--text-color);
+    border-bottom: 2px solid transparent;
+    transition: border-bottom .2s linear;
+}
+nav a:hover{
+    border-bottom: 2px solid var(--red-color);
+}
+.buttom_header{
+    display: flex;
+    column-gap: 30px;
+    margin-right: 20px;
+    align-items: center;
+}
+
+
+
+/* ** BANNER ** */
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 101.49px;
+    padding-bottom: 103px;
+}
+.banner_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 40.76px;
+}
+.banner h2{
+    font-size: 50px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    width: 555px;
+    height: 140px;
+    margin: 20px 0;
+}
+.banner p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    width: 555px;
+    height: 60px;
+    margin-bottom: 50px;
+}
+.banner img{
+    width: 611.24px;
+    height: 382.44px;
+}
+.banner_block a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    width: 250px;
+    height: 60px;
+    background: var(--red-color);
+    border-radius: 10px;
+    box-shadow: 0px 25px 15px -10px rgba(245, 56, 56, 0.35);
+    transition: background .2s linear;
+}
+.banner_block a:hover{
+    background: #0b132a;
+}
+
+
+/* ** Block_Info ** */
+
+.block_info{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 95.83px;
+    width: 1140px;
+    height: 200px;
+    background: #FFFFFF;
+    border-radius: 10px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+}
+.info span{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+}
+.info b{
+    font-family: 'Rubik', sans-serif;
+    font-size: 25px;
+}
+.block {
+    display: flex;
+    column-gap: 36.5px;
+}
+.block i{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    background: #FFECEC; 
+    color: var(--red-color);
+    border-radius: 70px;
+    font-size: 15px;
+}
+.border_right{
+    width: 0px;
+    height: 125.57px;
+    border: 2px solid #EEEFF2;
+}
+
+
+/* ** About Us ** */
+
+.About_Us{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 207px;
+}
+
+.About_Us img{
+    width: 508.12px;
+    height: 414.71px;
+    position: relative;
+    bottom: 40px;
+}
+
+.About_block{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 169.48px;
+    row-gap: 20px;
+}
+
+.About_block h3{
+    width: 383.41px;
+    height: 100px;
+    line-height: 50px;
+    color: var(--text-color);
+    font-size: 35px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+}
+
+.About_block p{
+    width: 427.88px;
+    height: 60px;
+    line-height: 30px;
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+}
+
+.have{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 15px;
+}
+.have span{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 10.08px;
+    color: var(--text-color);
+    font-size: 14px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    line-height: 30px;
+}
+
+.about_check{
+    background: #2FAB73;
+    border-radius: 15px;
+    font-size: 10px;
+    color: #fff;
+    height: 20px;
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ** Traffic Plans ** */
+
+.card_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
+.tariff_plans{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 150px;
+}
+
+.tariff_plans h3{
+    width: 383.41px;
+    height: 50px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    text-align: center;
+    line-height: 50px;
+    padding-bottom: 20px;
+    color: var(--text-color);
+}
+
+.tariff_plans p{
+    width: 555px;
+    height: 60px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    text-align: center;
+    line-height: 30px;
+    color: var(--text-color);
+    padding-bottom: 60px;
+}
+
+.list_card{
+    display: flex;
+    justify-content: center;
+    column-gap: 50px;
+}
+.card{
+    width: 330px;
+    /* height: 760px; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    row-gap: 30px;
+    border: 2px solid #DDDDDD;
+    box-sizing: border-box;
+    border-radius: 10px;
+    transition: border-color .2s linear;
+    padding-bottom: 50px;
+}
+.card:hover{
+    border: 2px solid var(--red-color);
+}
+.card h4{
+    font-family: 'Rubik', sans-serif;
+    color: var(--text-color);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 50px auto;
+}
+.card img{
+    vertical-align: top;
+}
+.tariff_description{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 30px;
+    row-gap: 10px;
+}
+.tariff_description span{
+    color: var(--text-color);
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 30px;
+}
+.btn_buy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+}
+.tariff_money{
+    color: var(--text-color);
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+}
+.tariff_check{
+    color: #2FAB73;
+    margin-right: 15px;
+}
+
+
+/* ** Global Map ** */
+
+.global_map{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.global_map h3{
+    width: 383.41px;
+    height: 100px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: var(--text-color);
+}
+
+.global_map p{
+    width: 555px;
+    height: 60px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    text-align: center;
+    font-size: 16px;
+    color: #4F5665;
+    margin-bottom: 150px;
+}
+.map img{
+    width: 1060px;
+    height: 537.77px;
+}
+.lasles_sponsor{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1135.64px;
+    height: 208.32px;
+    column-gap: 45.38px;
+}
+.lasles_sponsor img{
+    width: 105%;
+    height: 100%;
+    object-fit: cover;
+    transition: filter .3s linear;
+}
+.sponsor{
+    height: 60px;
+    width: 190px;
+    margin-bottom: unset
+}
+.lasles_sponsor img:hover{
+    -webkit-filter: brightness(10%);
+    filter: brightness(10%);
+}
+
+
+/* ** Slider Reviews ** */
+
+
+
+.slider_reviews{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.slider_reviews h3{
+    width: 447.81px;
+    height: 100px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.slider_description{
+    width: 555px;
+    height: 60px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    margin-bottom: 60px;
+    text-align: center;
+}
+.block_slider{
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 180px;
+    padding: 20px;
+    border: 2px solid #DDDDDD;
+    border-radius: 10px;
+}
+.block_slider img{
+    width: 50px  !important;
+    height: 50px;
+    border-radius: 50px;
+    object-fit: fill;
+}
+.profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.name_profile{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: 15px;
+}
+.name_profile p{
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 30px;
+}
+.country{
+    font-style: normal;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 14px;
+    color: #4F5665;
+}
+.Score{
+    display: flex;
+    align-items: center;
+}
+.Score span{
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: var(--text-color);
+}
+.Score i{
+    color: #FEA250;
+    margin-left: 5px;
+}
+.feedback{
+    height: 100px;
+    font-family: 'Rubik', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+}
+
+.btn_slider{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.owl-carousel.owl-loaded{
+    display: flex !important;
+    flex-wrap: wrap;
+    flex-direction:  row-reverse;
+    justify-content: space-between;
+}
+.owl-stage {
+    display: flex;
+    column-gap: 50px;
+}
+.owl-stage-outer{
+    margin-bottom: 60px;
+}
+.owl-dots {
+    display: flex !important;
+    align-items: center;
+    margin-left: 50px;
+}
+.owl-carousel .owl-nav.disabled{
+    display: flex !important;
+    justify-content: flex-end;
+}
+.owl-next, .owl-prev{
+    border: 2px solid #F53838 !important;
+    border-radius: 50% !important; 
+    width: 60px;
+    height: 60px;
+    transition: background .3s linear;
+    outline: none;
+    color: var(--red-color) !important;
+    
+}
+.owl-next:hover, .owl-prev:hover  {
+    background: #F53838 !important;
+    color:#fff !important;
+}
+.owl-prev{
+    margin-right: 20px;
+}
+.owl-next{
+    margin-right: 50px;
+}
+
+.owl-dot.active{
+    width: 30.14px;
+    height: 10px;
+    margin: 5px;
+    background: var(--red-color) !important;
+    border-radius: 30px;
+    outline: none;
+}
+.owl-dot{
+    width: 10px;
+    height: 10px;
+    margin: 5px;
+    background: #DDE0E4 !important;
+    border-radius: 30px;
+    outline: none;
+    transition: width .2s linear;
+}
+/* 30.14px */
+
+
+
+
+/* ** Subscribe Banner ** */
+
+.subscribe_banner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1140px;
+    height: 233px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    margin: 0 auto;
+    position: relative;
+    top: 115px;
+    padding: 0 50px;
+    box-shadow: 0px 83px 50px -58px rgba(13, 16, 37, 0.2);
+}
+.subscribe_banner h3{
+    width: 371.61px;
+    height: 80px;
+    margin-bottom: 20px;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 35px;
+    line-height: 45px;
+    color: var(--text-color);
+}
+
+.subscribe_banner p{
+    font-family: Rubik;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F5665;
+}
+
+.subscribe_banner a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    width: 250px;
+    height: 60px;
+    background: var(--red-color);
+    border-radius: 10px;
+    box-shadow: 0px 25px 15px -10px rgba(245, 56, 56, 0.35);
+    transition: background .2s linear;
+}
+.subscribe_banner a:hover{
+    background: #0b132a;
+}
+
+/* ** Footer Block ** */
+
+.footer_block{
+    background: #F8F8F8;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 180px;
+}
+
+.blockF1 img{
+    margin-bottom: 20px;
+}
+
+.blockF1 p{
+    width: 340px;
+    height: 61.57px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 30px;
+    color: #4F5665;
+
+    margin-bottom: 30px;
+}
+
+.btn_social{
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+.btn_social a{
+    background: #FFFFFF;
+    height: 33.6px;
+    width: 33.6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 25px;
+    color: var( --red-color);
+    margin-right: 20px;
+    box-shadow: 0px 13px 18px rgba(17, 19, 35, 0.08);
+    transition: color .2s linear ,background .2s linear;
+}
+
+.btn_social a:hover{
+    color: #fff;
+    background: #0b132a;
+}
+
+.links_information{
+    display: flex;
+    flex-direction: row;
+}
+
+.copyright{
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    color: #AFB5C0;
+}
+
+.information {
+    display: flex;
+    flex-direction: column;
+    height: 280px;
+    margin-left: 126px;
+}
+
+.information h4{
+    margin-bottom: 20px;
+
+    font-family: 'Rubik', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: var(--text-color);
+}
+
+.information a{
+    margin-bottom: 10px;
+    border-bottom: 2px solid transparent;
+    font-family: 'Rubik', sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+    color: #4F5665;
+    transition: border-bottom .2s linear;
+}
+.information a:hover{
+    border-bottom: 2px solid var(--red-color);
+}

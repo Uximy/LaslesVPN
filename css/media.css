@@ -1,0 +1,26 @@
+
+@media screen and (max-width: 1024px){
+    body{
+        width: 123%;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        width: 164%;
+    }
+}
+@media screen and (max-width: 414px){
+    body{
+        width: 304%;
+    }
+}
+@media screen and (max-width: 375px){
+    body{
+        width: 336%;
+    }
+}
+@media screen and (max-width: 360px){
+    body{
+        width: 350%;
+    }
+}
