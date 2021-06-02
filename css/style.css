@@ -9,7 +9,7 @@
     margin: 0;
     padding: 0;
 }
-.body_content {
+body{
     margin: 20px;
 }
 a{
@@ -17,7 +17,13 @@ a{
     color: #000000;
     font-family: 'Rubik', sans-serif;
 }
-
+.top_block_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 555px;
+}
 .lasles_btn{
     color: var(--red-color);
     width: 150px;
@@ -36,13 +42,25 @@ a{
 
 .lasles_btn_text{
     color: var(--text-color);
-    border-bottom: 2px solid transparent;
-    transition: border-bottom .2s linear;
-}
-.lasles_btn_text:hover{
-    border-bottom: 2px solid var(--red-color);
+    position: relative;
 }
 
+.lasles_btn_text::after{
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-color);
+    content: '';
+    transition: opacity .2s ease-out;
+    opacity: 0;
+}
+
+.lasles_btn_text:hover:after,
+.lasles_btn_text:focus:after{
+    opacity: 100;
+}
 
 /* ** HEADER ** */
 
@@ -54,20 +72,33 @@ header{
 .Logo{
     margin-left: 30px;
 }
-nav{
+.header_menu_nav{
     display: flex;
     justify-content: center;
     align-items: center;
     column-gap: 40px;
     margin: 0 auto;
 }
-nav a{
+.header_menu_nav a{
     color: var(--text-color);
-    border-bottom: 2px solid transparent;
-    transition: border-bottom .2s linear;
+    position: relative;
 }
-nav a:hover{
-    border-bottom: 2px solid var(--red-color);
+
+.header_menu_nav a::after{
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-color);
+    content: '';
+    transition: opacity .2s ease-out;
+    opacity: 0;
+}
+
+.header_menu_nav a:hover:after,
+.header_menu_nav a:focus:after{
+    opacity: 100;
 }
 .buttom_header{
     display: flex;
@@ -75,8 +106,6 @@ nav a:hover{
     margin-right: 20px;
     align-items: center;
 }
-
-
 
 /* ** BANNER ** */
 
@@ -108,10 +137,6 @@ nav a:hover{
     height: 60px;
     margin-bottom: 50px;
 }
-.banner img{
-    width: 611.24px;
-    height: 382.44px;
-}
 .banner_block a{
     display: flex;
     justify-content: center;
@@ -124,12 +149,12 @@ nav a:hover{
     background: var(--red-color);
     border-radius: 10px;
     box-shadow: 0px 25px 15px -10px rgba(245, 56, 56, 0.35);
-    transition: background .2s linear;
+    transition: background .2s linear, box-shadow .2s linear;
 }
 .banner_block a:hover{
     background: #0b132a;
+    box-shadow: 0px 25px 15px -10px #0b132a;
 }
-
 
 /* ** Block_Info ** */
 
@@ -144,6 +169,8 @@ nav a:hover{
     background: #FFFFFF;
     border-radius: 10px;
 }
+
+
 .info{
     display: flex;
     flex-direction: column;
@@ -160,6 +187,7 @@ nav a:hover{
 .block {
     display: flex;
     column-gap: 36.5px;
+    position: relative;
 }
 .block i{
     display: flex;
@@ -170,14 +198,22 @@ nav a:hover{
     background: #FFECEC; 
     color: var(--red-color);
     border-radius: 70px;
-    font-size: 15px;
-}
-.border_right{
-    width: 0px;
-    height: 125.57px;
-    border: 2px solid #EEEFF2;
+    font-size: 16px;
 }
 
+.block::before{
+    content: "";
+    width: 3px;
+    height: 125.57px;
+    background: #EEEFF2 no-repeat;
+    position: absolute;
+    left: -85px;
+    top: -35px;
+}
+
+.block:nth-child(1):before{
+    display: none;
+}
 
 /* ** About Us ** */
 
@@ -189,8 +225,6 @@ nav a:hover{
 }
 
 .About_Us img{
-    width: 508.12px;
-    height: 414.71px;
     position: relative;
     bottom: 40px;
 }
@@ -201,11 +235,10 @@ nav a:hover{
     justify-content: center;
     padding-left: 169.48px;
     row-gap: 20px;
+    width: 427.88px;
 }
 
 .About_block h3{
-    width: 383.41px;
-    height: 100px;
     line-height: 50px;
     color: var(--text-color);
     font-size: 35px;
@@ -214,8 +247,6 @@ nav a:hover{
 }
 
 .About_block p{
-    width: 427.88px;
-    height: 60px;
     line-height: 30px;
     color: var(--text-color);
     font-size: 16px;
@@ -255,13 +286,6 @@ nav a:hover{
 
 /* ** Traffic Plans ** */
 
-.card_block {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    margin-top: 30px;
-}
-
 .tariff_plans{
     display: flex;
     flex-direction: column;
@@ -271,7 +295,6 @@ nav a:hover{
 }
 
 .tariff_plans h3{
-    width: 383.41px;
     height: 50px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
@@ -283,8 +306,6 @@ nav a:hover{
 }
 
 .tariff_plans p{
-    width: 555px;
-    height: 60px;
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
     font-size: 16px;
@@ -294,6 +315,13 @@ nav a:hover{
     padding-bottom: 60px;
 }
 
+.card_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-top: 30px;
+}
+
 .list_card{
     display: flex;
     justify-content: center;
@@ -301,7 +329,6 @@ nav a:hover{
 }
 .card{
     width: 330px;
-    /* height: 760px; */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -373,7 +400,6 @@ nav a:hover{
 
 .global_map h3{
     width: 383.41px;
-    height: 100px;
     font-family: 'Rubik', sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -385,8 +411,6 @@ nav a:hover{
 }
 
 .global_map p{
-    width: 555px;
-    height: 60px;
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
     text-align: center;
@@ -423,10 +447,7 @@ nav a:hover{
     filter: brightness(10%);
 }
 
-
 /* ** Slider Reviews ** */
-
-
 
 .slider_reviews{
     display: flex;
@@ -434,9 +455,8 @@ nav a:hover{
     flex-direction: column;
     align-items: center;
 }
+
 .slider_reviews h3{
-    width: 447.81px;
-    height: 100px;
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 35px;
@@ -444,9 +464,8 @@ nav a:hover{
     text-align: center;
     margin-bottom: 20px;
 }
+
 .slider_description{
-    width: 555px;
-    height: 60px;
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
     font-size: 16px;
@@ -454,6 +473,7 @@ nav a:hover{
     margin-bottom: 60px;
     text-align: center;
 }
+
 .block_slider{
     display: flex;
     flex-direction: column;
@@ -463,30 +483,35 @@ nav a:hover{
     border: 2px solid #DDDDDD;
     border-radius: 10px;
 }
+
 .block_slider img{
     width: 50px  !important;
     height: 50px;
     border-radius: 50px;
     object-fit: fill;
 }
+
 .profile{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 20px;
 }
+
 .name_profile{
     display: flex;
     flex-direction: column;
     width: 100%;
     margin-left: 15px;
 }
+
 .name_profile p{
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 18px;
     line-height: 30px;
 }
+
 .country{
     font-style: normal;
     font-family: 'Rubik', sans-serif;
@@ -494,20 +519,24 @@ nav a:hover{
     font-size: 14px;
     color: #4F5665;
 }
+
 .Score{
     display: flex;
     align-items: center;
 }
+
 .Score span{
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
     font-size: 16px;
     color: var(--text-color);
 }
+
 .Score i{
     color: #FEA250;
     margin-left: 5px;
 }
+
 .feedback{
     height: 100px;
     font-family: 'Rubik', sans-serif;
@@ -522,28 +551,29 @@ nav a:hover{
     justify-content: center;
     align-items: center;
 }
+
 .owl-carousel.owl-loaded{
     display: flex !important;
     flex-wrap: wrap;
     flex-direction:  row-reverse;
     justify-content: space-between;
 }
-.owl-stage {
-    display: flex;
-    column-gap: 50px;
-}
+
 .owl-stage-outer{
     margin-bottom: 60px;
 }
+
 .owl-dots {
     display: flex !important;
     align-items: center;
     margin-left: 50px;
 }
+
 .owl-carousel .owl-nav.disabled{
     display: flex !important;
     justify-content: flex-end;
 }
+
 .owl-next, .owl-prev{
     border: 2px solid #F53838 !important;
     border-radius: 50% !important; 
@@ -554,13 +584,16 @@ nav a:hover{
     color: var(--red-color) !important;
     
 }
+
 .owl-next:hover, .owl-prev:hover  {
     background: #F53838 !important;
     color:#fff !important;
 }
+
 .owl-prev{
     margin-right: 20px;
 }
+
 .owl-next{
     margin-right: 50px;
 }
@@ -573,6 +606,7 @@ nav a:hover{
     border-radius: 30px;
     outline: none;
 }
+
 .owl-dot{
     width: 10px;
     height: 10px;
@@ -582,10 +616,6 @@ nav a:hover{
     outline: none;
     transition: width .2s linear;
 }
-/* 30.14px */
-
-
-
 
 /* ** Subscribe Banner ** */
 
@@ -634,10 +664,11 @@ nav a:hover{
     background: var(--red-color);
     border-radius: 10px;
     box-shadow: 0px 25px 15px -10px rgba(245, 56, 56, 0.35);
-    transition: background .2s linear;
+    transition: background .2s linear, box-shadow .2s linear;
 }
 .subscribe_banner a:hover{
     background: #0b132a;
+    box-shadow: 0px 25px 15px -10px #0b132a;
 }
 
 /* ** Footer Block ** */
@@ -655,14 +686,11 @@ nav a:hover{
 
 .blockF1 p{
     width: 340px;
-    height: 61.57px;
-
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 30px;
     color: #4F5665;
-
     margin-bottom: 30px;
 }
 
@@ -705,28 +733,52 @@ nav a:hover{
 .information {
     display: flex;
     flex-direction: column;
-    height: 280px;
+    align-items: flex-start;
     margin-left: 126px;
+}
+
+.information:nth-child(3) {
+    margin-left: 70px;
 }
 
 .information h4{
     margin-bottom: 20px;
-
     font-family: 'Rubik', sans-serif;
     font-weight: 500;
     font-size: 18px;
     color: var(--text-color);
 }
 
-.information a{
+.information li{
+    list-style-type: none;
     margin-bottom: 10px;
-    border-bottom: 2px solid transparent;
+}
+
+.lists{
+    height: 250px;
+}
+
+.lists li a{
     font-family: 'Rubik', sans-serif;
     font-weight: normal;
     font-size: 16px;
     color: #4F5665;
-    transition: border-bottom .2s linear;
+    position: relative;
 }
-.information a:hover{
-    border-bottom: 2px solid var(--red-color);
+
+.lists li a::after{
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 2px;
+    background-color: var(--red-color);
+    content: '';
+    transition: opacity .2s ease-out;
+    opacity: 0;
+}
+
+.lists li a:hover:after,
+.lists li a:focus:after{
+    opacity: 100;
 }
