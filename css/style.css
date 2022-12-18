@@ -99,7 +99,7 @@ header{
 .header_menu_nav a:hover:after,
 .header_menu_nav a:focus:after{
     opacity: 100;
-        width: 100%;
+    width: 100%;
 }
 .buttom_header{
     display: flex;
