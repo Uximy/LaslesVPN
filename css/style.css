@@ -88,17 +88,18 @@ header{
     position: absolute;
     left: 0;
     bottom: -3px;
-    width: 100%;
+    width: 0%;
     height: 2px;
     background-color: var(--red-color);
     content: '';
-    transition: opacity .2s ease-out;
+    transition: opacity .5s ease-in-out, width .5s ease-in-out;
     opacity: 0;
 }
 
 .header_menu_nav a:hover:after,
 .header_menu_nav a:focus:after{
     opacity: 100;
+        width: 100%;
 }
 .buttom_header{
     display: flex;
